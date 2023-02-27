@@ -14,7 +14,7 @@ public class DecrementingCarousel {
         }
     }
 
-    public boolean addElement(int element) throws UnsupportedOperationException {
+    public boolean addElement(int element)  {
         if (state ==1) {
             return false;
         }
@@ -29,31 +29,11 @@ public class DecrementingCarousel {
             return true;
         }
 
-    public int[] getArr() {
-        return arr;
-    }
-
-    public int getCapacity() {
-        return capacity;
-    }
-
-    public byte getState() {
-        return state;
-    }
-
-    public void setCount(byte state) {
-        this.state = state;
-    }
-
-    public int getI() {
-        return i;
-    }
-
     public CarouselRun run() {
         if (state==1) {
             return null;
         }
         state=1;
-        return new CarouselRun(arr,i);
+        return new CarouselRun(arr);
     }
 }
